@@ -74,7 +74,7 @@ def main():
         max_tracker = pickle.load(open('maxes.pkl', 'rb'))
     except:
         layers = map(str, net._blob_names)
-        is_conv = [('conv' in ll or ll == 'inception_4c/3x3') for ll in layers]
+        is_conv = [False for ll in layers]
         max_tracker = NetMaxTracker(layers=layers, is_conv=is_conv, n_top=10)
 
         for idx, (i, image, label) in enumerate(reader):

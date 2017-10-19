@@ -177,6 +177,8 @@ def main():
     # Load network
     sys.path.insert(0, os.path.join(args.caffe_root, 'python'))
     import caffe
+    caffe.set_mode_gpu()
+    caffe.set_device(0)
     net = caffe.Classifier(
         args.deploy_proto,
         args.net_weights,

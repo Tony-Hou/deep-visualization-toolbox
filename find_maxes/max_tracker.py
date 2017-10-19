@@ -1,12 +1,12 @@
 #! /usr/bin/env python
 
 import os
-import ipdb as pdb
+#import ipdb as pdb
 import errno
 from datetime import datetime
 
 #import caffe
-from loaders import load_imagenet_mean, load_labels, caffe
+#from loaders import load_imagenet_mean, load_labels, caffe
 from jby_misc import WithTimer
 from caffe_misc import shownet, RegionComputer, save_caffe_image
 import numpy as np
